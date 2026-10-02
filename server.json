@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "net.shifuyuan/company-site-mcp",
+  "title": "世福源供应链 · 企业官网开放数据 MCP",
+  "description": "海南世福源冻品火锅食材供应链官网开放数据：全站检索、企业概况、产品矩阵、成功案例、FAQ、招聘 6 个只读工具，API Key 官网自助申请。",
+  "version": "1.0.0",
+  "websiteUrl": "https://gys.shifuyuan.net/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gys.shifuyuan.net/api/mcp/v1/rpc",
+      "headers": [
+        {
+          "name": "X-API-Key",
+          "description": "API Key 凭证：在官网 MCP 开放页（https://gys.shifuyuan.net/mcp）自助申请，即申即用；亦支持 Authorization: Bearer <key> 或 query 参数 api_key",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
